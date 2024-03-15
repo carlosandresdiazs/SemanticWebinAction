@@ -1,57 +1,285 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Apuntes de la Web Semántica</title>
-    <!--Estos son ejemplos del uso de archivos externos para etiquetado semántico
-    En este caso esta usando la especificación de Dublin Core-->
-    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+    <title>Generación de Metadatos con la HerramientaDC.MetadataGen</title>
+    <!--Se usa la especificación de Dublin Core para etiquetado semántico e-->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
 
-    <!--Este es un ejemplo de uso de etiquetas "meta" de HTML-->
-    <meta name="DC.title" content="Resumen de Web Semántica" />
-    <meta name="DC.identifier" content="https://github.com/manzamb/SemanticWebinAction/blob/master/Anotacion%20Curso/WebsiteAnotacion/01-HTML.htm" />
-    <meta name="DC.description" content="Este es un taller HTLM en el curso de Web Semántica" />
-    <meta name="DC.subject" content="html, taller, Web Semántica" />
-    <meta name="DC.language" scheme="ISO639-1" content="es" />
-    <meta name="DC.creator" content="https://sites.google.com/site/hojadevidamiguelanino/" />
-    <meta name="DC.publisher" content="Universidad del Cauca" />
-    <meta name="DC.license" content="Creative Commons" />
-    <meta name="DC.type" scheme="DCMITYPE" content="http://purl.org/dc/dcmitype/InteractiveResource" />
+    <!--Este es el resultado del generador de Metadatos Dublin Core un ejemplo de uso 
+        de etiquetas "meta" de HTML-->
+    <meta name="DC.title" content="Apuntes de la Web Semántica">
+    <meta name="DC.identifier" content="https://github.com/carlosandresdiazs">
+    <meta name="DC.description" content="Este Sitio Web es creado con el propósito de mostrar un resumen sobre Web Semántica.">
+    <meta name="DC.subject" content="resumen, web semántica, web, web actual, apuntes">
+    <meta name="DC.language" scheme="ISO639-1" content="es">
+    <meta name="DC.creator" content="https://www.linkedin.com/in/carlos-andr%C3%A9s-d%C3%ADaz-santacruz-3b5209132/">
+    <meta name="DC.contributor" content="https://www.linkedin.com/in/manzamb/?originalSubdomain=co">
+    <meta name="DC.publisher" content="https://ediciones.unibague.edu.co/">
+    <meta name="DC.license" content="https://co.creativecommons.net/tipos-de-licencias/">
+    <meta name="DC.type" scheme="DCMITYPE" content="http://purl.org/dc/dcmitype/Text">
     <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
-    <meta name="DCTERMS.created" scheme="ISO8601" content="2018-03-05" />
+    <meta name="DCTERMS.created" scheme="ISO8601" content="2024-03-09">
 
     <!--Esta es otra forma de usar etiquetas pero utilizando un archivo RDF con Dublin Core-->
     <link rel="meta"
-          type="application/rdf+xml"
-          href="/metadatos.rdf" />
+	      type="application/rdf+xml"
+	      href="http://www.example.org/fichero.rdf" />
 </head>
 <body>
-    <h1>Esta es una pagina de ejemplo del uso de Microformatos en HTML</h1>
+    <h1>Sitio Web - Microformatos en HTML generados en la Herramienta DC.MetadataGen</h1>
     <p style="font-family: 'Times New Roman', Times, serif">En este ejemplo se esta mostrando como dar formato al texto.</p>
-
     <dl class="dublincore">
-        <dt>Título:</dt>
-        <dd class="title">Resumen de Web Semántica</dd>
-        <dt>Dirección:</dt>
-        <dd><a href="https://github.com/manzamb/SemanticWebinAction/blob/master/Anotacion%20Curso/WebsiteAnotacion/01-HTML.htm" class="identifier">https://github.com/manzamb/SemanticWebinAction/blob/master/Anotacion%20Curso/WebsiteAnotacion/01-HTML.htm</a></dd>
-        <dt>Descripción:</dt>
-        <dd class="description">Este es un taller HTLM en el curso de Web Semántica</dd>
-        <dt>Palabras clave:</dt>
-        <dd class="subject">html, taller, Web Semántica</dd>
-        <dt>Código de idioma:</dt>
-        <dd class="language">es</dd>
+        <dt>Título:</dt><dd class="title">Apuntes de la Web Semántica</dd>
+        <dt>Dirección:</dt><dd><a href="https://github.com/carlosandresdiazs" class="identifier">https://github.com/carlosandresdiazs</a></dd>
+        <dt>Descripción:</dt><dd class="description">Este Sitio Web es creado con el propósito de mostrar un resumen sobre Web Semántica.</dd>
+        <dt>Palabras clave:</dt><dd class="subject">resumen, web semántica, web, web actual, apuntes</dd>
+        <dt>Código de idioma:</dt><dd class="language">es</dd>
         <dt>Autor/a:</dt>
 
-        <!--Estos dos enlaces son ejemplos del uso de microformatos para etiquetar dentro de las mismas etiquetas HTML-->
-        <!--Para el caso de los atributos rel= "co-worker" y "friend" XFN (XHTML Friends Network)
-        Para el caso de los atibutos class= "publisher", "licence", etc usa Microformatos Dublin Core-->
-        <dd><a href="https://sites.google.com/site/hojadevidamiguelanino/" class="creator">Miguel Angel Niño zambrano</a></dd>
-        <dd><a href="http://artemisa.unicauca.edu.co/~ccobos/" rel="friend co-worker">Carlos Cobos Lozada</a></dd>
+        <!--Estos dos enlaces son ejemplos del uso de microformatos para etiquetar dentro de las mismas 
+            etiquetas HTML-->
+        <!--Para el caso de los atibutos class= "creator", "contributor", "publisher", "license", etc 
+            usa Microformatos Dublin Core-->
+        
+        <dd><a href="https://www.linkedin.com/in/carlos-andr%C3%A9s-d%C3%ADaz-santacruz-3b5209132/" class="creator">Carlos Andrés Díaz Santacruz</a></dd>
+        <dt>Colaborador/a:</dt><dd><a href="https://www.linkedin.com/in/manzamb/?originalSubdomain=co" class="contributor">Miguel Angel Niño Zambrano</a></dd>
         <dt>Editor/a:</dt>
-        <dd class="publisher">Universidad del Cauca</dd>
+        <dd><a href="https://ediciones.unibague.edu.co/" class="publisher">Ediciones Universidad de Ibagué</a></dd>
         <dt>Derechos:</dt>
-        <dd class="license">Creative Commons</dd>
+        <dd><a href="https://co.creativecommons.net/tipos-de-licencias/" class="license">CC-BY-ND</a></dd>
         <dt>Fecha de creación:</dt>
-        <dd class="created">2018-03-05</dd>
-    </dl>
+        <dd class="created">2024-03-09</dd>
+    </dl>     
 </body>
+</html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <h1 align="Center" ><font color="9999FF">Apuntes de la web Semántica</font></h1>
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="FF0000"><h3>Sesión 1 y 2</h3></font></p>
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="9999FF"><h3>La Web Actual</h3></font></p>         
+       
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><h3>Web Actual</h3></p> 
+            </li>
+        </ul>
+        <dl>
+            <ul type=circle> 
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;" ><font color="373737"><h4>Web 1.0 Web de enlaces a recursos (páginas web, archivos)</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;" ><font color="373737"><h4>Web 2.0 implementa servicios (redes sociales, blogs, wikis, imágenes, videos, etc.)</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;" ><font color="373737"><h4>Web Sintáctica y no Semántica para las máquinas.</h4></font></p></dd>    
+            </ul>
+        </dl>
+       
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif"><h3>Problemas de la Web actual</h3></p> 
+            </li>
+        </ul>
+        <dl>
+            <ul type=circle> 
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Heterogeneidad, Masiva, cambio rápido, hecha para los humanos.</h4></font></p></dd>
+            </ul>
+        </dl>
+
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif"><h3>¿Cómo podemos empoderar a una aplicación para que consuma y relacione datos en la 
+                    Web? </h3></p> 
+            </li>
+        </ul>
+        <dl>
+            <ul type=circle> 
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Anotación Semántica</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Lenguaje estándar entre máquinas que incorpore el significado de los recursos que 
+                gestiona. </h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Mecanismos y técnicas formales de razonamiento de la información</h4></font></p></dd>
+            </ul>
+        </dl>
+
+        <p style="font-family: 'Times New Roman', Times, serif"><font color="373737"><h3>Ejemplo: Hacer el Ejemplo de mi información en la web actual con HTML. </h3></font></p>
+        
+        <br> <br/>
+        
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="9999FF"><h3>Introducción a la Web Semántica </h3></font></p>         
+       
+        <dl>
+            <ul type=circle> 
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;" ><font color="373737"><h4>Diferentes tipos de datos y recursos, pero sin significado para las máquinas</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;" ><font color="373737"><h4>Una máquina necesita un lenguaje de especificación formal de los recursos Web y sus 
+                relaciones. Las recomendaciones de la W3C con respecto al uso de RDF y OWL van enfocadas a construir la Web Semántica</h4></font></p></dd>
+            </ul>
+        </dl>
+        <p style="font-family: 'Times New Roman', Times, serif"><font color="373737"><h3>Ejemplo: Hacer Ejemplo de mi Información con semántica propia XMLS.</h3></font></p>
+
+        <br> <br/>
+
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="9999FF"><h3>Web Semántica</h3></font></p>         
+
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><h3>¿Cómo construir la Web Semántica?</h3></p> 
+            </li>
+        </ul>
+        <dl>
+            <ul type=circle> 
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;" ><font color="373737"><h4>Utilizar adecuadamente las URI y URL. (identificación única de los recursos web)</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;" ><font color="373737"><h4>Crear y utilizar un lenguaje que describa y relacione los recursos de la Web</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;" ><font color="373737"><h4>Debe ser procesable por las máquinas y entendibles a los humanos</h4></font></p></dd>
+                <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;" ><font color="373737"><h4>Debe ser estándar y que use tecnologías completamente interoperables.</h4></font></p></dd>      
+            </ul>
+        </dl>
+       
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif"><h3>¿Cuándo se implemente la WS, que características tendremos en la Web?</h3></p> 
+            </li>
+        </ul>
+        <dl>
+            <ul type=circle> 
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Es capaz de organizar la información y estructurarla lógicamente.</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Permite integrar recursos web con diferentes formatos.</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Permite la interoperabilidad entre dispositivos.</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Es capaz de contestar con exactitud lo que el usuario busca.</h4></font></p></dd>   
+            </ul>
+        </dl>
+
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif"><h3>¿Cómo podemos empoderar a una aplicación para que consuma y relacione datos en la 
+                    Web? </h3></p> 
+            </li>
+        </ul>
+        <dl>
+            <ul type=circle> 
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Anotación Semántica</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Lenguaje estándar entre máquinas que incorpore el significado de los recursos que 
+                gestiona. </h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Mecanismos y técnicas formales de razonamiento de la información</h4></font></p></dd>
+            </ul>
+        </dl>
+
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif"><h3>Piedra angular de la WS: Metadatos</h3></p> 
+            </li>
+        </ul>
+        <dl>
+            <ul type=circle> 
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Se pueden encontrar en las propiedades de los recursos web (Word, pdf, 
+                imágenes, páginas Web, metadatos sociales, micro-formatos, etc.).</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Estructura de un metadato: Recurso (sujeto)  Propiedad (predicado)  Valor 
+                (objeto). En dónde cada uno puede ser un URI.</h4></font></p></dd>
+               <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Se pueden implementar utilizando:</h4></font></p></dd>
+                <dl>
+                    <ul type=disc> 
+                       <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Microformatos – Etiquetas de metadatos (meta)</h4></font></p></dd>
+                       <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>EMediante especificaciones XHTML llamados (schema)</h4></font></p></dd>
+                       <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Mediante perfiles (profiles).</h4></font></p></dd>
+                       <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>Mediante la definición personalizada de metadatos (archivos RDF)</h4></font></p></dd> 
+                    </ul>
+                </dl>
+
+                <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>¿Qué Tecnologías necesita la Web Semántica?</h4></font></p></dd>
+                    <dl>
+                        <ul type=disc> 
+                           <dd><li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h4>XML, RDF , SPARQL, OWL y RDFa</h4></font></p></dd>
+                        </ul>
+                    </dl>
+            </ul>
+        </dl>
+        
+        <p style="font-family: 'Times New Roman', Times, serif"><font color="373737"><h3>Ejemplo: Hacer una página con metadatos “meta” con las diferentes formas</h3></font></p>
+        
+        <br> <br/>
+
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="FF0000"><h3>Sesión 3</h3></font></p>
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="9999FF"><h3>¿Qué es el XML?</h3></font></p>         
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>XML:  eXtensible  Markup  Languaje,  es  un  metalenguaje  extensible  de  etiquetas.  Permite 
+                definir la gramática de un lenguaje particular. Permite la interoperabilidad sintáctica entre las máquinas.</h3></font></p> 
+            </li>
+        </ul>
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="9999FF"><h3>¿Qué es RDF?</h3></font></p>         
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>RDF: Resource  Description  Framework,  proporciona  información  descriptiva  sobre  los 
+                 recursos  que  se  encuentran  en  la  Web.  es  una  base  para  procesar  metadatos. Permite la interoperabilidad semántica entre las máquinas.  (permite recuperación,  catalogación, compartir, 
+                 calificación, propiedad intelectual y seguridad de los recursos web).</h3></font></p> 
+            </li>
+        </ul>
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="9999FF"><h3>¿Qué es SPARQL?</h3></font></p>         
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>SPARQL: Simple Protocol and RDF Query Language, es un lenguaje de consulta sobre RDF, 
+                permitiendo recuperar recursos web que cumplan con los filtros correspondientes, aplicando lógica de primer orden para relacionar los recursos.</h3></font></p> 
+            </li>
+        </ul>
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="9999FF"><h3>¿Qué son las ontologías?</h3></font></p>         
+        <ul type=square>
+            <li>
+                <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Una ontología es un conjunto de conceptos interrelacionados entre sí, explícitos, 
+                compartidos</h3></font></p> 
+            </li>
+        </ul>
+
+        <br><br/>
+
+        <h1 align="Center" ><font color="9999FF">Taller No 1 Manejo de metadatos de los Recursos Web</font></h1>
+        
+        <br><br/>
+
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Objetivo: El presente taller tiene el fin de que los estudiantes hagan un uso correcto de los 
+        metadatos existentes en la Web y de la Anotación de recursos Web</h3></font></p>
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Tiempo: 1 hora</h3></font></p> 
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Recursos: Visual Studio, ExifTool, metadata++</h3></font></p>  
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Descripción: El taller tiene dos partes, la primera es un ejercicio de búsqueda y recopilación de 
+        metadatos de los recursos web existente y la segunda parte es la anotación de recursos web utilizando diferentes técnicas existentes.</h3></font></p>     
+        
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="9999FF"><h3>Parte I</h3></font></p> 
+        
+        <ol type="1">
+			<li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Descargue la herramienta de línea de comando llamada ExifTool (<a href="http://owl.phy.queensu.ca/~phil/exiftool/">http://owl.phy.queensu.ca/~phil/exiftool/</a>), 
+            la cual le permitirá editar los metadatos de los archivos.</h3></font></p></li>
+			<li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Seleccione dos copias de imágenes de su biblioteca personal, en lo posible que hayan sido 
+            posteadas en las redes sociales y a las que se las haya colocado comentarios de las personas en las fotos.  También seleccione un pdf y documento de Word.</h3></font></p></li>
+			<li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Por medio de línea de comando verificar los metadatos de los archivos anteriores así: 
+            exiftool “nombrearchivo” <enter>. Si algunas imágenes no muestran metadatos es porque están encriptadas.</h3></font></p></li>
+            <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Para sistemas operativos Windows se puede descargar también una aplicación que utiliza 
+            un GUI llamado metadata++, que utiliza ExifTool como herramienta de análisis en segundo plano (<a href="http://www.logipole.com/metadata++_en.htm">http://www.logipole.com/metadata++_en.htm</a>). Seguir los pasos 
+            recomendados para su instalación y después realice una exploración de la herramienta para ver los metadatos, modificarlos y agregar metadatos a los archivos.</h3></font></p></li>    
+            <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Crear un proyecto de sitio Web en Visual Studio.</h3></font></p></li>
+            <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Buscar en <a href="https://www.nuget.org">https://www.nuget.org</a> cualquier paquete con Exif. 
+            Se desplegará una lista de los posibles paquetes para lectura de metadatos. Busque NexifTool, lea como instalarlo a través de la línea de comando de NUGET e instálelo en el proyecto.  (). Seguir los pasos 
+            recomendados para su instalación y después realice una exploración de la herramienta para ver los metadatos, modificarlos y agregar metadatos a los archivos.</h3></font></p></li>  
+            <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Una vez instalado el paquete proceda a crea una página aspnet que permita seleccionar 
+            una imagen y analícelo con el paquete tal como se indica en las referencias y documentación del paquete.</h3></font></p></li> 
+            <ol type="a">
+                <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Cree una carpeta de imágenes en el proyecto y copia las imágenes a ser 
+                analizadas.</h3></font></p></li>
+                <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Coloque un control button en la página aspnet. Cambie las propiedades para que 
+                se lea “Leer metadatos” </h3></font></p></li>
+                <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>A continuación, coloque un control de imagen y cargue una de las imágenes por 
+                defecto al control con la propiedad imageURL.</h3></font></p></li>
+                <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Coloque una textbox y la propiedad textMode colóquela Multiline</h3></font></p></li>
+                <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Agregue la referencia a la dll importada “using NExifTool;”</h3></font></p></li>
+                <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>En el evento click del botón coloque el código fuente para obtener los metadatos 
+                de la imagen y colocarlos en el textbox.</h3></font></p></li>
+            </ol>   
+		</ol>
+
+        <p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="9999FF"><h3>Parte II</h3></font></p> 
+        <ol type="1">
+			<li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Cree una página HTML con un resumen de lo visto hasta ahora en la Tutoría de Web 
+            Semántica y coloque Microformatos básicos con etiquetas meta (description, keywords, autor, abstract).</h3></font></p></li>
+            <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Utilizando el mismo HTML usando perfiles, en específico usando el perfil de dublin core 
+            para adicionar etiquetas de (date, contributor, rights).</h3></font></p></li>
+            <li><p style="font-family: 'Times New Roman', Times, serif", "margin-top:0; margin-bottom:0;"><font color="373737"><h3>Finalmente crear un RDF que utilice dublin core también para colocar metadatos sobre el 
+            autor, el título y la descripción del texto del HTML.</h3></font></p></li>
+		</ol>        
+    </body>
 </html>
